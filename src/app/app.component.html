@@ -1,3 +1,10 @@
 <h1>
-  {{title}}
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spotify_logo_with_text.svg/500px-Spotify_logo_with_text.svg.png"/>
+
+  <hr>
+  <button (click)="toggleShow('Search')">Zoekscherm Weergeven</button>
+  <button (click)="toggleShow('Favorite')">Favorieten Weergeven</button>
+
+  <app-favorite-list *ngIf="showFavorite"></app-favorite-list>
+  <app-search-component *ngIf="showSearch"></app-search-component>
 </h1>

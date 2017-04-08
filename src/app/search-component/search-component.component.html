@@ -1,0 +1,17 @@
+
+  <h5>Zoek de artiesten waar jij fan van bent, en sla ze op in je lijst met favoriete artiesten</h5>
+  <input type="search"
+         [(ngModel)]="artist"
+         placeholder="voer naam artiest in"/>
+
+  <button (click)="searchArtist(artist)">Zoek</button>
+  <div *ngIf="result">
+    <table>
+      <tr *ngFor="let artist of result; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{artist.name}}</td>
+        <td> <img src="{{ artist.images[1]?.url }}" width="150px" height="150px"></td>
+        <td><button (click)="favoriteArtist(artist)">Maak favoriet</button></td>
+      </tr>
+    </table>
+  </div>

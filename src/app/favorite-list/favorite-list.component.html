@@ -1,0 +1,12 @@
+
+<h5>Jouw lijst met favoriete artiesten.</h5>
+
+<div *ngIf="favoriteArtists">
+  <table>
+    <tr *ngFor="let artist of favoriteArtists; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{artist.name}}</td>
+      <td> <img src="{{ artist.images[1]?.url }}" width="150px" height="150px"></td>
+    </tr>
+  </table>
+</div>

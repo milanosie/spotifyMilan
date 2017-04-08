@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { SearchComponentComponent } from './search-component/search-component.component';
+import { FavoriteListComponent } from './favorite-list/favorite-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchComponentComponent,
+    FavoriteListComponent
   ],
   imports: [
     BrowserModule,
